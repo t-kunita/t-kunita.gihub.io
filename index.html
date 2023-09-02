@@ -1,21 +1,105 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Table</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <table id="data-table">
+  <h1>プログラミング基礎　成果報告(RT國田)</h1>
+  <h3>　　　　部内で管理している共用設備の一覧を表示するアプリを作成しました。</h3>
+  <p>
+    <div class="box">
+        <table id="backGraund">
+          <tr>
+            <th>■　背景</th>
+          </tr>
+          <tr>
+            <td>所属　　：</td>
+            <td>先進技術統括部　エリア支援室 エリア運営G<Br>
+               （東富士管理部　総括室　DX推進G）</td>
+          </tr>
+          <tr>
+            <td>主な業務：</td>
+            <td>サテライト・会議室の管理
+              (アプリ起動：<a href ="https://apps.powerapps.com/play/e/default-d1c1335e-f582-42a9-b6fe-5e1a16eb9bc8/a/f2904d2b-b1a7-4620-858c-426ab26a15de?">Kilog</a>
+              ,<a href ="https://apps.powerapps.com/play/e/default-d1c1335e-f582-42a9-b6fe-5e1a16eb9bc8/a/b78e1b47-590e-4846-95b5-245f28d99186?&mailID=ex_c_qu_0000007962@exmail.toyota.co.jp">さくっと予約</a>
+              ,<a href ="https://apps.powerapps.com/play/e/default-d1c1335e-f582-42a9-b6fe-5e1a16eb9bc8/a/73dcbaa5-c336-4565-997b-7761887f5dcb?">ほぜんの窓口</a>
+              )<Br>
+          部内業務DX化 等   
+            </td>
+          </tr>
+
+        </table>
+    </div>
+    <br>
+    <img class="gyomuImg" src="pic/QR使う人.png" alt="Image 1">
+    <img class="gyomuImg" src="pic\Kilog.png" alt="Image 2">
+    <img class="gyomuImg" src="pic/さくっと予約.PNG" alt="Image 3">
+    <img class="gyomuImg" src="pic/ほぜんの窓口.PNG" alt="Image 3">
+  </p> 
+  <h2>■　アプリ構成図</h2>
+  <img src="pic/構成図.PNG" width="500px">
+  <p id="gator">🐊🐊🐊🐊🐊</p>
+
+  <h1>共用設備一覧</h1>
+  <table id="select">
+    <tr>
+      <th>分類</th>
+      <th>拠点</th>      
+      <th>建屋</th>
+      <th>フロア</th>
+    </tr>
+    <tr>
+      <td>
+        <select id="category">       
+          <option value="none">選択してください</option>
+          <option value="会議室">会議室</option>
+          <option value="業務用車">業務用車</option>
+          <option value="整備場">整備場</option>
+        </select>
+      </td>  
+      <td>      
+        <select id="kyoten">       
+          <option value="none">選択してください</option>
+          <option value="本社技術">本社技術</option>
+          <option value="花本">花本</option>
+          <option value="TTC-S">TTC-S</option>
+          <option value="東富士">東富士</option>
+        </select>      
+      </td>  
+      <td>
+        <select id="tateya">       
+          <option value="none">選択してください</option>
+        </select>
+      </td> 
+      <td>
+        <select id="floor" >       
+          <option value="none">選択してください</option>
+        </select>
+      </td> 
+      <td>
+        <button type id="searchButton">検索</button>
+      </td>
+    </tr>
+  </table> 
+  <br>
+  <table border="1" id="data-table">
     <thead>
       <tr>
-        <th>LocationID</th>
-        <th>Category</th>
-        <!-- <th>Age</th> -->
+        <th>大分類</th>     
+        <th>中分類</th>     
+        <th>拠点</th>
+        <th>建屋</th>
+        <th>フロア</th>
+        <th>名称</th>
       </tr>
     </thead>
     <tbody></tbody>
   </table>
-  <script src="client.js"></script>
+  <script src="client.js"></script>  
+
 </body>
 </html>
