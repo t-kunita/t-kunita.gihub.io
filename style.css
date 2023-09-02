@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.box{
+  display: flex;
+  justify-content: center;  
+  background-color:rgb(246, 248, 248);
+}
+
+th{
+  font-size: 22px;
+}
+
+td{
+  text-align: left;
+}
+
+.slider-container {
+  /* width:50px */
+  width: 50vw;
+  /* height: 100vh; */
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  overflow: hidden;
+}
+
+.gyomuImg{
+  width: 150px;
+  flex: 2; /* 残りのスペースを均等に分配 */
+  padding: 20px; /* スライド間のスペースを調整 */
+  height: auto;
+}
+
+#select{
+  display: flex;
+  justify-content: center;   
+}  
+
+#data-table {
+  margin-left: auto;
+  margin-right: auto;   
+}
+
+#gator:hover{
+  cursor:pointer;
+}
